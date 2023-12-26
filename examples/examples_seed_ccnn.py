@@ -71,7 +71,7 @@ for i, (train_dataset, val_dataset) in enumerate(k_fold.split(dataset)):
     train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=64, shuffle=False)
 
-    model = CCNN(num_classes=3, in_channels=4, grid_size=(9, 9))
+    model = CCNN(num_classes=2, in_channels=4, grid_size=(9, 9))
 
     trainer = ClassifierTrainer(model=model,
                                 num_classes=2,
